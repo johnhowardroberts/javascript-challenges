@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // find out the score of a basketball game based on 2 pointers and 3 pointers that were made
+
+        const finalScore = (twoPointersTeam1, threePointersTeam1, twoPointersTeam2, threePointersTeam2) => {
+            let teamOneScore = (twoPointersTeam1 * 2) + (threePointersTeam1 * 3);
+            let teamTwoScore = (twoPointersTeam2 * 2) + (threePointersTeam2 * 3);
+            console.log(`The final score is ${teamOneScore} - ${teamTwoScore}.`)
+            if (teamOneScore === teamTwoScore) {
+                console.log("The game was tied!");
+            } else if (teamOneScore > teamTwoScore) {
+                console.log("Team One won the game!");
+            } else {
+                console.log("Team Two won the game!");
+            }
+        }
+
+        finalScore(30, 15, 24, 21);
+        finalScore(10, 10, 10, 10);
+    </script>
+
+
+</body>
+</html>
